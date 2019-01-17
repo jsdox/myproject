@@ -23,6 +23,10 @@ jobs:
           command: |
             sudo composer self-update
             composer install --prefer-source --no-interaction --dev
+      - run:
+         name: Unit Tests
+         command: |
+           ./vendor/phpunit/phpunit/phpunit
       - run: bash .circleci/setup-heroku.sh
       - add_ssh_keys:
           fingerprints:

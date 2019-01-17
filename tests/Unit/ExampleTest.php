@@ -16,4 +16,11 @@ class ExampleTest extends TestCase
     {
         $this->assertTrue(true);
     }
+
+    public function testHelloWorld() {
+		$this->assertTrue(true);
+		$this->assertFalse(false);
+		$this->assertNotEmpty(['hello']);
+		$this->assertEquals(true, true);
+  }
 }
